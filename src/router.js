@@ -1,25 +1,29 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import RestaurantsIndex from './views/RestaurantsIndex.vue';
+import RestaurantsNew from './views/RestaurantsNew.vue';
+import Signup from "./views/Signup.vue";
+import Login from "./views/Login.vue";
+import Logout from "./views/Logout.vue";
+import About from "./views/About.vue";
+import RestaurantsReview from "./views/RestaurantsReview.vue";
+
 
 Vue.use(Router)
+
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+    { path: '/restaurants', name: 'restaurant', component: RestaurantsIndex},
+    { path: '/restaurants/new', name: 'restaurants-new', component: RestaurantsNew},
+    { path: '/restaurants/signup', name: 'signup', component: Signup},
+    { path: '/restaurants/login', name: 'login', component: Login},
+    { path: '/restaurants/logout', name: 'logout', component: Logout},
+    { path: '/restaurants/about', name: 'about', component: About},
+    { path: '/restaurants/reviews', name: 'review', component: RestaurantsReview}
   ]
 })
+
+

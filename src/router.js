@@ -8,6 +8,7 @@ import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
 import RestaurantsShow from './views/RestaurantsShow.vue';
 import About from "./views/About.vue";
+import RestaurantsGoogle from "./views/RestaurantsGoogle.vue";
 
 
 
@@ -25,7 +26,8 @@ export default new Router({
     { path: '/restaurants/login', name: 'login', component: Login},
     { path: '/restaurants/logout', name: 'logout', component: Logout},
     { path: '/restaurants/:id', name: 'restaurants-show', component: RestaurantsShow},
-    { path: '/restaurants/about', name: 'about', component: About}
+    { path: '/restaurants/about', name: 'about', component: About},
+    { path: '/', name: 'google', component: RestaurantsGoogle}
    
   ]
 })

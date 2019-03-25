@@ -1,36 +1,19 @@
 <template>
   
   <div class="restaurants-show">
-    <img :src=" restaurant.image_url " :alt="restaurant.name ">
-    <h1>{{ restaurant.name }}</h1>
-    <h4>Address: {{ restaurant.address }}</h4>
-    <h4>Phone Number: {{ restaurant.phone_number }}</h4>
-    <h4>Website Url: {{ restaurant.website_url }}</h4>
-    <h4>Menu Url: {{ restaurant.menu_url }}</h4>
-    <h4>Hours: {{ restaurant.hours }}</h4>  
-
-    <div v-for="review in restaurant.reviews">
-      <div>
-        Name: {{review.user.name}}
-      </div>
-      <div>
-        {{review.content}}
-      </div>
-      <div>
-        Taco Points: {{review.taco_points}}
-      </div>
-      <div>
-        ------------------------------
-      </div>
-    </div>
-
-    
+  
+    <h1>{{ restaurantInfo.name }}</h1>
+    <h1>{{ restaurantInfo.photo }}</h1>
+    <h4>Address: {{ restaurantInfo.vicinity }}</h4>
+    <h4>Phone Number: {{ restaurantInfo.formatted_phone_number }}</h4>
+    <h4>Google Rating: {{ restaurantInfo.rating }}</h4>
+    <h4>Total ratings: {{ restaurantInfo.user_ratings_total }}</h4>
+    <h4>Website: {{ restaurantInfo.website }}</h4>
   
   </div>
 </template>
 
 <style>
-  
 
 </style>
 
@@ -40,35 +23,21 @@
   export default {
     data: function() {
       return {
-        restaurant: {
-                      id: "",
-                      name: "",
-                      phone_number: "",
-                      website_url: "",
-                      menu_url: "",
-                      hours: "",
-                      reviews: []
-                     }
-      
+        restaurantInfo: {}
     };
   },
 
   created: function() {
-    axios.get("/api/restaurants/" + this.$route.params.id)
+    axios.get("/google/restaurants/" + this.$route.params.place_id)
       .then(response => {
         console.log(response.data);
-        this.restaurant = response.data;  
+        this.restaurantInfo = response.data;  
       });
   },
 
-  methods: {
-    destroyRestaurant: function() {
-      axios.delete("/api/restaurants/:id" + this.restaurant.id)
-        .then(response => {
-          console.log("Success", response.data);
-          this.$router.push("/");
-        });
-    } 
+  methods: { 
   }
 }
 </script>
+
+<!-- this.$route.params.id -->

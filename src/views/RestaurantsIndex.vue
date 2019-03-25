@@ -1,47 +1,27 @@
-<!-- <template>
-  <div class="restaurants-index">
-    <h1>Restaurants</h1>
-    <div v-for="restaurant in restaurants">
-      <h2>{{ restaurant.name }}</h2>
-    </div>
-  </div>
-</template>
-
-<script>
-import axios from "axios";
-
-
-export default {
-  data: function() {
-    return {
-      restaurants: []
-    };
-  },
-  created: function() {
-    axios.get("/api/restaurants").then(response => {
-      this.restaurants = response.data;
-    });
-  },
-  methods: {}
-};
-</script> -->
-
-
 <template>
+  
   <div class="restaurants-index">
-<button v-on:click="getRestaurants()">
-  Submit
-</button>
-    <h1>Restaurants</h1>
+    <h1>TACOHOLICS</h1>
+
+    <p>"Surround yourself with tacos, not negativity.”<p>
+
+    <h4>No need to type your info in, just click the button!</h4>
+
+
+
+    <button v-on:click="getRestaurants()">
+      Take me to the tacos!
+    </button>
+
     <div v-for="restaurant in restaurants">
-      <h2>{{ restaurant.name }}</h2>
+         <router-link :to=" '/restaurants/' + restaurant.place_id ">{{ restaurant.name }} </router-link>
+
     </div>
-  </div>
+    </div>
 </template>
 
-
-
 <script>
+
 import axios from "axios";
 
 export default {
@@ -56,12 +36,12 @@ export default {
 
     },  
     getRestaurants: function() {
-      axios.get("/api/restaurants")
+      axios.get("/google/restaurants")
       .then(response => {
         console.log(response.data);
         this.restaurants = response.data;  
       });
-  },
+    }
   }
-};
+}
 </script>

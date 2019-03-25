@@ -1,5 +1,6 @@
 <template>
   <div class="restaurants-new">
+    
     <h1>Found a new joint?  Let us know about it!</h1>
     <ul>
       <li v-for="error in errors">{{ error }}</li>

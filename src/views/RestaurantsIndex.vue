@@ -3,23 +3,27 @@
   <div class="restaurants-index">
     <h1>TACOHOLICS</h1>
 
-    <p>"Surround yourself with tacos, not negativity.”<p>
+<img src="https://i.etsystatic.com/14519444/r/il/675b9a/1394634104/il_570xN.1394634104_s245.jpg">
+ <!--    <p>"Surround yourself with tacos, not negativity.”</p> -->
 
-    <h4>No need to type your info in, just click the button!</h4>
-
-
+    <h4>You're one click away from paradise!</h4>
 
     <button v-on:click="getRestaurants()">
       Take me to the tacos!
     </button>
 
     <div v-for="restaurant in restaurants">
-         <router-link :to=" '/restaurants/' + restaurant.place_id ">{{ restaurant.name }} </router-link>
+         <h3><router-link :to=" '/restaurants/' + restaurant.place_id ">{{ restaurant.name }}</router-link></h3>
 
     </div>
     </div>
 </template>
+<style>
+  .Restaurant-index .card:hover {
+    box-shadow: 8px 8px 35px 8px #004d00
+  }
 
+</style>
 <script>
 
 import axios from "axios";
@@ -45,3 +49,4 @@ export default {
   }
 }
 </script>
+

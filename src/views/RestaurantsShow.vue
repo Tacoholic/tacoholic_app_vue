@@ -3,12 +3,31 @@
   <div class="restaurants-show">
   
     <h1>{{ restaurantInfo.name }}</h1>
-    <h1>{{ restaurantInfo.photo }}</h1>
-    <h4>Address: {{ restaurantInfo.vicinity }}</h4>
-    <h4>Phone Number: {{ restaurantInfo.formatted_phone_number }}</h4>
-    <h4>Google Rating: {{ restaurantInfo.rating }}</h4>
-    <h4>Total ratings: {{ restaurantInfo.user_ratings_total }}</h4>
-    <h4>Website: {{ restaurantInfo.website }}</h4>
+    <h2>Address:</h2>
+    <h4><a :href="'https://www.google.com/maps/place/' + restaurantInfo.formatted_address">{{ restaurantInfo.formatted_address }}</a></h4>
+    <h2>Phone Number:</h2>
+    <h5>{{ restaurantInfo.formatted_phone_number }}</h5>
+    <h2>Google Rating:</h2>
+    <h3>{{ restaurantInfo.rating }}</h3>
+
+    <h2>Total ratings:</h2>
+    <h3>{{ restaurantInfo.user_ratings_total }}</h3>
+    <h2>Website:</h2>
+    <h4><a :href=" restaurantInfo.website ">{{ restaurantInfo.website }}</a></h4>
+    <h2>Hours:</h2>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[0] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[1] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[2] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[3] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[4] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[5] }}</h4>
+    <h4> {{ restaurantInfo.opening_hours.weekday_text[6] }}</h4>
+    <!-- <h4> {{ restaurantInfo.opening_hours.open_now }}</h4> -->
+
+
+
+   
+  
   
   </div>
 </template>

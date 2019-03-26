@@ -74,7 +74,7 @@ export default {
       axios.post("/api/restaurants", params)
       .then(response => {
         console.log("Success", response.data);
-        this.$router.push("/");
+        this.$router.push("/Taco");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });

@@ -1,5 +1,6 @@
 <template>
   <div class="logout">
+    <h5>Thanks for coming!</h5>
   </div>
 </template>
 
@@ -14,4 +15,5 @@ export default {
   }
 };
 </script>
+
 

@@ -52,7 +52,7 @@ export default {
             axios
               .post("/api/users", params)
               .then(response => {
-                this.$router.push("/login");
+                this.$router.push("/restaurants/login");
               })
               .catch(error => {
                 this.errors = error.response.data.errors;

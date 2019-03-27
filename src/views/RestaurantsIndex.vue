@@ -1,15 +1,15 @@
 <template>
   
   <div class="restaurants-index">
-    <h1>TACOHOLICS</h1>
+    <h1>TACOHOLIC</h1>
 
 <img src="https://i.etsystatic.com/14519444/r/il/675b9a/1394634104/il_570xN.1394634104_s245.jpg">
  <!--    <p>"Surround yourself with tacos, not negativity.”</p> -->
 
-    <h4>You're one click away from paradise!</h4>
+    <h4>Click button to get the nearest establishments to you!</h4>
 
     <button v-on:click="getRestaurants()">
-      Take me to the tacos!
+      <h5>Take me to the tacos!</h5>
     </button>
 
     <div v-for="restaurant in restaurants">
@@ -19,6 +19,32 @@
     </div>
 </template>
 <style>
+
+body {
+  background-image: url("/img/cream_pixels.png");
+}
+
+h1 {
+  font-family: 'Crete Round', serif;
+}
+
+h2 {
+  font-family: 'Crete Round', serif;
+}
+
+h3 {
+  font-family: 'Crete Round', serif;
+}
+
+h4 {
+  font-family: 'Crete Round', serif;
+}
+
+h5 {
+  font-family: 'Crete Round', serif;
+}
+
+
   .Restaurant-index .card:hover {
     box-shadow: 8px 8px 35px 8px #004d00
   }

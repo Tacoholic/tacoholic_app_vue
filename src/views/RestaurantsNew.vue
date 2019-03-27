@@ -1,12 +1,12 @@
 <template>
   <div class="restaurants-new">
     
-    <h1>Found a new joint?  Let us know about it!</h1>
+    <h1>Discovered a new joint?  Let us know about it!</h1>
     <ul>
       <li v-for="error in errors">{{ error }}</li>
     </ul>
 
-  <form v-on:submit.prevent="submit()">
+    <h5> <form  v-on:submit.prevent="submit()">
     <div>
       Name: <input v-model="newRestaurantName">
     </div>
@@ -34,6 +34,7 @@
 
     <input type="submit" value="Create" class="btn btn-warning">
   </form>
+  </h5>
  </div>
 </template>
 

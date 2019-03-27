@@ -7,20 +7,28 @@
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="form-group">
+          <h4>
           <label>Name:</label> 
           <input type="text" class="form-control" v-model="name">
+          </h4>
         </div>
         <div class="form-group">
+          <h4>
           <label>Email:</label>
           <input type="email" class="form-control" v-model="email">
+          </h4>
         </div>
         <div class="form-group">
+          <h4>
           <label>Password:</label>
           <input type="password" class="form-control" v-model="password">
+        </h4>
         </div>
         <div class="form-group">
+          <h4>
           <label>Password confirmation:</label>
           <input type="password" class="form-control" v-model="passwordConfirmation">
+          </h4>
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
       </form>

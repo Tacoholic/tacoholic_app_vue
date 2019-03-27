@@ -34,9 +34,7 @@ export default new Router({
     { path: '/restaurants/:id/reviews', name: 'review', component: RestaurantsReview},
     { path: '/restaurants/logout', name: 'logout', component: Logout},
     { path: '/restaurants/about', name: 'about', component: About},
-    { path: '/Taco', name: 'taco', component: Taco},
-    
-    
+    { path: '/Taco', name: 'taco', component: Taco},  
     { path: '/', name: 'google', component: RestaurantsGoogle}
    
   ]

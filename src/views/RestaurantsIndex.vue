@@ -6,7 +6,7 @@
 <img src="https://i.etsystatic.com/14519444/r/il/675b9a/1394634104/il_570xN.1394634104_s245.jpg">
  <!--    <p>"Surround yourself with tacos, not negativity.”</p> -->
 
-    <h4>Click button to get the nearest establishments to you!</h4>
+    <h4>Click button!</h4>
 
     <button v-on:click="getRestaurants()">
       <h5>Take me to the tacos!</h5>

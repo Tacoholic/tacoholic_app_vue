@@ -11,7 +11,7 @@
   <h4>Sweet Home Chicago</h4>
   <p>Chicago leads the country with over 200 establishments that serve tacos.</p>
 
-  <img src="https://t3.ftcdn.net/jpg/01/34/49/80/240_F_134498095_FLXJNNa2GVr6QaGJPnKrPf63m6uFa3Hf.jpg">
+<!--   <img src="https://t3.ftcdn.net/jpg/01/34/49/80/240_F_134498095_FLXJNNa2GVr6QaGJPnKrPf63m6uFa3Hf.jpg"> -->
   </div>
 </template>
 

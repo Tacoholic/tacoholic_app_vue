@@ -2,7 +2,7 @@
 
   <div>
 
-  <img src="https://i.pinimg.com/236x/b8/61/7f/b8617f5045dd0d8176fc4f3f1ea140da--simpsons-funny-simpsons-quotes.jpg">
+<!--   <img src="https://i.pinimg.com/236x/b8/61/7f/b8617f5045dd0d8176fc4f3f1ea140da--simpsons-funny-simpsons-quotes.jpg"> -->
   
  <!--  <h1 style="color:green;">This is a Blue Heading</h1> -->
 

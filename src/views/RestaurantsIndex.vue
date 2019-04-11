@@ -21,7 +21,7 @@
 <style>
 
 body {
-  background-image: url("/img/cream_pixels.png");
+  background-image: url("/img/new_background.jpg");
 }
 
 h1 {

@@ -1,37 +1,36 @@
 <template>
   <div class="restaurants-new">
-    
     <h1>Is your restaurant not listed?</h1>
     <h2>Fill out the form below and let us know about it!</h2>
-    <ul>
-      <li v-for="error in errors">{{ error }}</li>
-    </ul>
+      <ul>
+        <li v-for="error in errors">{{ error }}</li>
+      </ul>
 
     <h5> <form  v-on:submit.prevent="submit()">
-    <div>
-      Name: <input v-model="newRestaurantName">
-    </div>
-    <div>
-      Address: <input v-model="newRestaurantAddress">
-    </div>
-    <div>
-      Latitude: <input v-model="newRestaurantLatitude">
-    </div>
-    <div>
-      Longitude: <input v-model="newRestaurantLongitude">
-    </div>
-    <div>
-      Phone Number: <input v-model="newRestaurantPhoneNumber">
-    </div>
-    <div>
-      Website Url: <input v-model="newRestaurantWebsiteUrl">
-    </div>
-    <div>
-      Menu Url: <input v-model="newRestaurantMenuUrl">
-    </div>
-    <div>
-      Hours: <input v-model="newRestaurantHours">
-    </div>
+      <div>
+        Name: <input v-model="newRestaurantName">
+      </div>
+      <div>
+        Address: <input v-model="newRestaurantAddress">
+      </div>
+      <div>
+        Latitude: <input v-model="newRestaurantLatitude">
+      </div>
+      <div>
+        Longitude: <input v-model="newRestaurantLongitude">
+      </div>
+      <div>
+        Phone Number: <input v-model="newRestaurantPhoneNumber">
+      </div>
+      <div>
+        Website Url: <input v-model="newRestaurantWebsiteUrl">
+      </div>
+      <div>
+        Menu Url: <input v-model="newRestaurantMenuUrl">
+      </div>
+      <div>
+        Hours: <input v-model="newRestaurantHours">
+      </div>
 
     <input type="submit" value="Create" class="btn btn-warning">
   </form>
